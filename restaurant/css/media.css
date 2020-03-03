@@ -1,0 +1,97 @@
+@media screen and (min-width: 1200px) {
+	body {
+		font-size: 16px;
+	}
+	.about .history__text,
+	.food .food__desc,
+	.footer .credits,
+	 {
+		font-size: 18px;
+	}
+	.call .phone__text {
+		width: 200px;
+		font-size: 16px;
+	}
+	.special .food__title {
+		font-size: 30px;
+	}
+	.about .history__title,
+	.special .special__title {
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.main-header .menu__item,
+	.main-header .book,
+	.about .history__text {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 992px) {
+	header .main-header {
+		text-align: center;
+		padding-bottom: 50px;
+	}
+	.main-header .menu  {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	.main-header .book {
+		margin: 0 auto;
+	}
+	.title {
+		text-align: center;
+	}
+	.about {
+		text-align: center;
+	}
+	.about .history {
+		margin-top: 0px;
+	}
+	.history__button {
+		margin: 0 auto;
+	}
+	.about .food__images__down {
+		margin-top: 50px;
+	}
+	.food__images .food__images__item {
+		width: 45%;
+		height: 200px;
+		margin-bottom: 5px;
+	}
+	.special {
+		padding-bottom: 50px;
+	}
+	.special .food {
+		margin-bottom: 30px;
+	}
+	.food__img {
+		width: 100%;
+	}
+	.special .food__desc {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.menu__item a{
+		font-size: 18px;
+	}
+	.about .history__text,
+	.food .food__desc,
+	.footer .credits {
+		font-size: 18px;
+	}
+	.food__images .food__images__item {
+		width: 50%;
+		height: 200px;
+	}
+}
+@media screen and (max-width: 550px) {
+	.special .food__desc {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 340px) {
+
+}
