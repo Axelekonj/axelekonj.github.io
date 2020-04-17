@@ -7,18 +7,12 @@
 	.header-logo {
 		justify-content: center;
 	}
-	.main__menu {
-		justify-content: center;
-	}
 	.our-story {
 		padding-top: 50px;
 	}
 	.our-story__content {
 		text-align: center;
 		margin-top: 25px;
-	}
-	.expert-items  {
-		padding-top: 10px;
 	}
 	.our-faces__img {
 		height: 180px;
@@ -34,9 +28,10 @@
 	}
 	.our-client__title {
 		text-align: center;
+		margin-bottom: 30px;
 	}
 	.footer {
-		background-position: -155px -400px;
+		background-position: 100% 100%, -155px -400px;
 	}
 	.footer-overlay {
 		padding: 40px 0;
@@ -67,29 +62,91 @@
 	.footer-stay__title {
 		margin-bottom: 20px;
 	}
-
 }
 @media screen and (max-width: 768px) {
+	.main__header {
+		margin-bottom: 80px;
+	}
+	.main__menu-btn {
+		display: block;
+		position: absolute;
+		padding: 23px 10px;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+	}
+	.menu-btn {
+		width: 30px;
+		height: 2px;
+		margin: auto;
+		background-color: #11a3a8;
+	}
+	.menu-btn:before,
+	.menu-btn:after {
+		content: "";
+		position: relative;
+		display: block;
+		width: 30px;
+		height: 2px;
+		background-color: #11a3a8;
+		border-radius: 25%;
+	}
+	.menu-btn:before {
+		bottom: 8px;
+	}
+	.menu-btn:after {
+		top: 7px;
+	}
+	.menu--hidden {
+		display: none;
+	}
+	.menu--visible {
+		display: flex;
+	}
+	.main__menu {
+		flex-direction: column;
+		margin-top: 20px;
+		height: 100%;
+    }
+	.main__menu li {
+		display: inline-block;
+		text-align: center;
+	}
+	.main__menu li + li {
+		margin-left: 0!important;
+	}
+	.main__menu li a:hover,
+	.footer-menu li a:hover {
+		transform: translateY(0px);
+		border-bottom: none;
+	}
+	.header__slider {
+		margin-bottom: 45px;
+	}
 	.our-team__faces {
 		justify-content: space-around!important;
 		flex-wrap: wrap;
 		margin-bottom: 50px;
 	}
+	.expert-item {
+		width: 100%;
+	}
 	.our-faces__content:nth-child(1),
 	.our-faces__content:nth-child(2) {
 		margin-bottom: 20px;
 	}
-	.biography {
-		background-position-y: -50px;
-	}
+	/*.biography__face-slider a {
+		display: none;
+	}*/
 	.our-client__images a:last-child {
 		display: none;
 	}
 	.news-clients {
-    padding: 40px 0px 40px;
+    	padding: 40px 0px 40px;
 	}
 	.footer {
-    background-position: -155px -230px;
+		padding: 65px 0px 10px;
+    	background-position: 100% 100%, -155px -230px;
 	}
 	.footer__heading {
 		flex-direction: column;
@@ -104,39 +161,40 @@
 	}
 	.footer-menu {
 		flex-direction: row;
-		margin: 0 auto 20px;
+		width: 100%;
+		justify-content: space-around;
+		margin-bottom: 20px;
 	}
-	.footer-stay label,
-	.footer-stay input {
+	.footer-stay__form input,
+	.footer-stay__form button
+	 {
+	 	display: block;
 		width: 100%;
 	}	
-	.footer-stay form button {
-		margin-left: auto;
+	.footer-stay__form input {
+		margin-bottom: 20px;
+	}
+	.footer-stay__social {
+		justify-content: center;
 	}
 }
 	
 @media screen and (max-width: 576px) {
-	.main__header {
-		margin-bottom: 80px;
+	body {
+		font-size: 12px;
+		line-height: 18px;
 	}
-	.main__menu {
-		flex-direction: column;
-		margin-top: 20px;
+	h2 {
+		font-size: 1.5rem;
 	}
-	.main__menu li + li {
-		margin-left: 0!important;
-	}
-	.main__menu li a {
-	text-align: center;
+	.header-offer {
+		padding: 0 1em;
 	}
 	.header__slider-title {
 		font-size: 30px;
 	}
-	.watch-story {
+	.watch-story__player[height="550px"] {
 		height: 400px;
-	}
-	.expert-item {
-		padding: 0 30px 20px;
 	}
 	.our-team {
 		padding: 50px 0 50px;
@@ -150,17 +208,23 @@
 	.biography__face-slider img {
 		margin: 0 5px;
 	}
+	.footer {
+		background-position: 100% 100%, -250px -150px; 
+	}
 }
 @media screen and (max-width: 510px) {
+	.header__slider {
+		padding-bottom: 60px;
+	}
 	.team {
-		background-position: center 500px
+		background-position: 100% 100%, center 450px;
 	}
 	.our-faces__content {
 		flex-direction: column;
 	}
 	.our-faces__content:nth-child(1),
 	.our-faces__content:nth-child(2) {
-		margin-bottom: 0;
+		margin-bottom: 0px;
 	}
 	.our-faces__content + .our-faces__content {
 		margin-top: 20px;
@@ -168,8 +232,6 @@
 	.biography__text {
 		padding: 100px 15px 0;
 		margin-bottom: 30px;
-		line-height: 1.4em;
-		text-align: justify;
 	}
 	.biography__text::before {
 		left: 50%;
@@ -181,16 +243,19 @@
 	.our-client__images a:last-child {
 		display: block!important;
 	}
-	.footer-overlay {
-		padding: 40px 20px;
-	}
 }
 @media screen and (max-width: 420px) {
 	.header {
-		background-position: -100px 0;
+		background-position: 100% 100%, bottom 0;
+	}
+	.header__slider {
+		min-height: 250px;
 	}
 	.slider-dots {
 		margin: 60px auto 30px; 
+	}
+	.watch-story__player[height="550px"]{
+		max-height: 300px;
 	}
 	.our-works__heading {
 		flex-direction: column;
@@ -200,8 +265,7 @@
 		flex-direction: column;
 	}
 	.our-works__item {
-		width: 80%;
-		margin: 0 auto;
+		width: 100%;
 	}
 
 	.biography__face-slider {
@@ -209,18 +273,29 @@
 	}
 }
 @media screen and (max-width: 375px) {
+	.header-logo {
+		justify-content: flex-start;
+	}
+	.watch-story__player[height="550px"]{
+		height: 250px;
+	}
+	.our-team__title {
+		margin-bottom: 10px;
+	}
+	.our-team__text {
+		padding-bottom: 40px;
+	}
     .our-client__images {
 		flex-direction: column;
 	}
 	.our-client__images a {
 		margin: 0 auto;
 	}
+	.biography__face-item:first-of-type {
+		display: none;
+	}
 }
 @media screen and (max-width: 320px) {
-	body{
-		line-height: 18px;
-	}
-	
 	.main__menu li + li {
   		margin-top: 10px;
 	}
@@ -234,12 +309,6 @@
 	.our-story__logo {
 		margin-bottom: 20px;
 	}
-	.watch-story {
-		height: 200px;
-	}
-	.watch-story p {
-		display: none;
-	}
 	.expert-header {
 		margin-top: 40px;
 	}
@@ -251,9 +320,6 @@
 		padding-top: 20px;
 		padding-bottom: 40px;
 	}
-	.our-works__item {
-		width: 100%;
-	}
 	.our-works__botton {
 		padding: 50px 0;
 	}
@@ -261,7 +327,7 @@
 		margin-bottom: 20px;
 	}
 	.news-clients {
-    padding: 40px 0px 40px;
+    	padding: 40px 0px 40px;
     }
 
 }
