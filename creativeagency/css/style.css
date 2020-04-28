@@ -105,6 +105,11 @@ button {
 	display: none;
 }
 .main__menu {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
     justify-content: flex-end;
     margin-top: 15px;  
 }
@@ -389,6 +394,7 @@ button {
     text-transform: uppercase;
     line-height: 22px;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .biography__data__name {
@@ -399,11 +405,12 @@ button {
 .biography__data__expect {
     color: #d5d3dc;
 }
-.biography-faces {
-	padding: 0 30px;
-}
 .biography__face-slider {
+    width: 395px;
+}
+.biography__face-slider__inner {
 	position: relative;
+	padding: 0 30px;
 	width: 100%;
     height: 70px;  
 }
@@ -411,23 +418,41 @@ button {
 	overflow: hidden;
 }
 .slick-track {
-	display: flex;
+	display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
 }
-.biography__face-item {
-    border-radius: 50%;
-    width: 45px;
+.biography__slider-item {
+    margin: 0 7px;
+}
+.biography__slider-image {
+	margin: auto;
+	width: 45px;
     height: 45px;
-    margin: 0 7.5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/face__slider-img.png);
+    border-radius: 50%;
 }
-.biography-faces .slick-prev,
-.biography-faces .slick-next {
-	position: absolute;
-}
-.biography-faces .slick-prev {
+.biography__face-slider .slick-prev {
 	left: 0;
+	top: 20px;
 }
-.biography-faces .slick-next {
+.biography__face-slider .slick-next {
 	right: 0;
+	top: 20px;
+}
+.biography__face-slider__inner .slick-prev:before {
+	content: '\e802';
+	font-family: "fontello";
+}
+.biography__face-slider__inner .slick-next:before {
+	content: '\e803';
+	font-family: "fontello";
 }
 .news-clients {
     padding: 65px 0px 70px;

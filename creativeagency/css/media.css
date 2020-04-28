@@ -240,6 +240,9 @@
 		padding-top: 15px;
 		margin-bottom: 20px;
 	}
+	.biography__face-slider {
+    	width: 250px;
+	}
 	.our-client__images a:last-child {
 		display: block!important;
 	}
@@ -270,6 +273,9 @@
 
 	.biography__face-slider {
 		margin-bottom: 30px;
+	}
+	.biography__face-slider .slick-track {
+		justify-content: center;
 	}
 }
 @media screen and (max-width: 375px) {

@@ -5,10 +5,17 @@ $(document).ready(function() {
 		infinit: false,
 		dots: true,
 	});
-	$('.biography__face-slider').slick({
-		prevArrow: '.slick-prev',
-		nextArrow: '.slick-next',
+	$('.biography__face-slider__inner').slick({
 		slidesToShow: 5,
-		infinit: true,
+		infinit: false,
+		responsive: [
+			{
+				breakpoint: 425,
+				settings: {
+					slidesToShow: 3,
+					// arrows: false,
+				}
+			}
+		]
 	});
 });
